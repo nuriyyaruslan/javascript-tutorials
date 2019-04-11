@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practical example using loops</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <a href="#">Link1</a>
+        <a href="#">Link2</a>
+        <a href="#">Link3</a>
+        <a href="#">Link4</a>
+        <a href="#">Link5</a>
+        <a href="#">Link6</a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore sequi amet laborum, excepturi soluta quia iste ipsam rerum officiis blanditiis quibusdam assumenda corrupti eius temporibus saepe eaque nihil maiores neque.</p>
+        <script>
+            var links = document.getElementsByTagName("a");
+            for(i=0; i<links.length; i++){
+                links[i].className = "link -"+1;
+            }
+        </script>
+    </body>
+</html>

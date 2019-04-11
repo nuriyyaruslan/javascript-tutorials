@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Validation</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <script src="js/script.js"></script>
+        <style>
+            #message{
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>What is form validation?</h1>
+
+        <form action="" id="my-form" name="myForm" action="#">
+            <label for="name">Name:</label>
+            <input type="text" name="name"> <br>
+
+            <label for="">Hobbies:</label> <br>
+            <input type="checkbox" name="biking" value="biking"> Biking <br>
+            <input type="checkbox" name="skiing" value="skiing">Skiiing <br>
+            <input type="checkbox" name="driving" value="driving">Driving <br>
+
+            <label for="colour">Favorite colour:</label>
+
+            <select name="colour" id="">
+                <option value="">Red</option>
+                <option value="">Green</option>
+                <option value="">Blue</option>
+            </select> <br>
+            <button type="submit">Submit</button>
+
+            <div id="message"></div>
+        </form>
+
+        <script>
+           let myForm = document.forms.myForm;
+           let message = document.getElementById("message");
+           myForm.onsubmit = function(){
+               if(myForm.name.value == ""){
+                   message.innerHTML = "Please enter a name";
+                   return false;
+               }else{
+                   message.innerHTML = "";
+                   return true;
+               }
+           }
+        </script>
+    </body>
+</html>

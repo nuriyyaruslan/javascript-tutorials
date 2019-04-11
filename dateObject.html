@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Date Object</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <h1>What is Date Object?</h1>
+
+        <script>
+           //Date Object
+            
+           //current time
+           var myDate = new Date();
+           console.log(myDate);
+
+           //past date
+           //years, months, days, time, seconds
+           var myPastDate = new Date(1545, 11, 2, 10, 30, 15);
+           var myFutureDate = new Date(2515, 0 , 31, 10, 30,15);
+           console.log("Past Date  is equal = " + myPastDate);
+           console.log("Future Date is equal = " + myFutureDate);
+
+           //for example new object
+           var birthday = new Date(1994, 7 , 11 , 11, 30, 20);
+           console.log(birthday); 
+            
+           //all methods
+
+           
+           console.log(birthday.getFullYear());
+           console.log(birthday.getDate());
+           console.log(birthday.getMonth());
+           console.log(birthday.getHours());
+           console.log(birthday.getMinutes());
+           console.log(birthday.getSeconds());
+           console.log(birthday.getMilliseconds());
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>this</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <h1>What is this key word?</h1>
+
+        <script>
+           console.log(this);
+
+           var myCar = {
+               mySpeed:70,
+               time:5,
+               carColour:'red',
+               myDriver:'nuriyya',
+               drive:function(speed,time){
+                   console.log(speed*time);
+               },
+               test: function(){
+                   console.log(this);
+               },
+               whoIsDriver:function(){
+                   console.log('The car driver is ' + this.myDriver);
+               }
+           }
+
+           console.log(myCar.whoIsDriver());
+           console.log(myCar.mySpeed);
+           console.log(myCar.drive(4,10));
+           console.log(myCar.test());
+        </script>
+    </body>
+</html>

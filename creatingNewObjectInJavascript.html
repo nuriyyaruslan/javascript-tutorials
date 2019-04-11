@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>creatingNewObjectInJavascript</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <h1>Creating New Object In Javascript</h1>
+
+        <script>
+            var myArray = new Array();
+            myArray[0] = 8;
+            myArray[1] ="Hello";
+
+            var myCar = new Object();
+            myCar.maxSpeed = 50;
+            myCar.driver = "Nuriyya";
+            console.log(myCar.driver);
+            
+            //exactly the same prinsip
+            // myString.length;
+
+
+            myCar.driver = function(){
+                console.log("now driving");
+            }
+
+            myCar.driver();
+
+            //
+            var myCar2 = {maxSpeed:50,driver:"ruslan",drive:function(){
+                console.log("now driving");
+            }};
+
+            console.log(myCar2.maxSpeed);
+            console.log(myCar2.drive());
+        </script>
+    </body>
+</html>

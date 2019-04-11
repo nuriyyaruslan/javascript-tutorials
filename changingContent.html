@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Changing Content</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <h1 id="pageTitle">How to change content in javascript?</h1>
+        
+
+        <p class="myTxt"><span>One of the best JavaScript libraries for working with dates is moment. It is really easy to install, use and has many functions that help you with parsing, validating, manipulating and formatting dates.</span>
+        <i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam sapiente, vel aperiam sit obcaecati odio, consectetur ut nulla est nihil qui iure ipsum reiciendis. Deleniti repellendus earum temporibus reprehenderit? Voluptas.</i>
+        </p>
+
+        <script>
+            //innerHtml
+
+            // var myBody = document.getElementsByTagName("body");
+            // console.log(myBody);
+            
+            // console.log(myBody[0].innerHTML);
+
+            //Note: getElementsByClassName take collections arrays
+            var myTxt = document.getElementsByClassName('myTxt');
+            var myTxtContent = myTxt[0].innerHTML;
+            console.log(myTxtContent);
+
+            //change content with innerHtml
+            var changingContent = myTxt.innerHTML="<p>I am a paragraph tag</p>";
+            console.log(changingContent);
+
+
+            //textContent
+            var pageTitle = document.getElementById("pageTitle");
+            console.log(pageTitle);
+            var changingContent = pageTitle.textContent = "I am learning Javascript!";
+        </script>
+    </body>
+</html>

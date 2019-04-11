@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Events</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <!-- onclick="alert('you clicked me!')" -->
+        <h1 id="pageTitle">What is Events?</h1>
+        
+        <p class="myTxt"><span>One of the best JavaScript libraries for working with dates is moment. It is really easy to install, use and has many functions that help you with parsing, validating, manipulating and formatting dates.</span>
+        <i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam sapiente, vel aperiam sit obcaecati odio, consectetur ut nulla est nihil qui iure ipsum reiciendis. Deleniti repellendus earum temporibus reprehenderit? Voluptas.</i>
+        </p>
+
+        <ul>
+            <li><a href="#" id="jquery">Jquery</a></li>
+            <li><a href="#">Angular</a></li>
+            <li><a href="#">React</a></li>
+            <li><a href="#">Vue</a></li>
+        </ul>
+        <script>
+            // alert('console');
+            var element = document.getElementById('pageTitle');
+            element.onclick = function(){
+                alert('you clicked yout title');
+            }
+
+            var jqueryItem = document.getElementById('jquery');
+            jqueryItem.oncopy = function(){
+                this.style.background = 'orange';
+            }
+        </script>
+    </body>
+</html>

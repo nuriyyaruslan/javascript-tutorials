@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Timer</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <script src="js/script.js"></script>
+        <style>
+            body{
+                background: #eee;
+            }
+            #message{
+                max-width:400px;
+                background: orange;
+                padding:20px;
+                font-size: 18px;
+                color:#fff;
+                margin:0 auto;
+                text-align: center;
+                border:1px solid #fff;
+                font-weight:bold;
+                opacity: 0;
+                transition: opacity .7s ease-in-out;
+            }
+            #message.show{
+                opacity: 1;
+                transition:opacity .7s ease-in-out;
+            }
+            
+            #color-changer{
+                width:200px;
+                height:100px;
+                margin:30px auto;
+                border:1px solid #000;
+                background:#fff;
+
+                transition:background-color .7s ease-in-out;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- code for setTimeout -->
+       <!-- <div id="message">
+           <p>This is a really important notification</p>
+           <p>Pie is nice</p>
+           <div id="colour-changer"></div>
+       </div> -->
+
+       <div id="color-changer"></div>
+
+        <script>
+           //how times use in javascript
+
+           //setTimeout
+        //    var myMessage= document.getElementById("message");
+        //    function showMessage(){
+        //        myMessage.className = "show";
+        //    }
+        //    setTimeout(showMessage, 3000);
+           
+           
+           //setTimeINterval
+           var colorChanger = document.getElementById("color-changer");
+           var colors = ["red","green","blue","pink"];
+
+           function changeColor(){
+               for(counter=0; counter<colors.length; counter++){
+                   colorChanger.style.background = colors[counter];
+                   counter++;
+               }
+           }
+
+           var myTimer =  setInterval(changeColor,3000);
+
+
+           changeColor.onclick = function(){
+               clearInterval(myTimer);
+               colorchange.innerHTML = "Timer stopped";
+           }
+        </script>
+    </body>
+</html>

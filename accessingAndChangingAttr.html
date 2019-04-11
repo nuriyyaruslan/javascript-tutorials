@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Accesing and Changing Attributes</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <h1 id="pageTitle">Accesing and Changing Attributes</h1>
+        
+        <p class="myTxt"><span>One of the best JavaScript libraries for working with dates is moment. It is really easy to install, use and has many functions that help you with parsing, validating, manipulating and formatting dates.</span>
+        <i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam sapiente, vel aperiam sit obcaecati odio, consectetur ut nulla est nihil qui iure ipsum reiciendis. Deleniti repellendus earum temporibus reprehenderit? Voluptas.</i>
+        </p>
+
+        <a href="index.html" id="lessonlink" class="lessonlink">lesson link</a>
+
+        <script>
+           //take attr value getAttribute
+           var lessonLink = document.getElementById('lessonlink');
+           console.log(lessonlink);
+
+           //href attr
+           var href = lessonlink.getAttribute('href');
+           console.log(href);
+
+           //id attr
+           var id = lessonlink.getAttribute('id');
+           console.log(id);
+
+            //class attr
+            var classValue = lessonlink.getAttribute('class');
+            console.log(classValue);
+ 
+            //set attr setAttribute
+            var setAttr = lessonlink.setAttribute('class','setedAttr');
+            console.log(setAttr);
+            
+
+            var setOtherAttr = lessonlink.setAttribute('alt','hello');
+            
+
+            //some methods
+            console.log(lessonlink.className);
+            console.log(lessonlink.className = "hey");
+            console.log(lessonlink.href="juju");
+            console.log(lessonlink.style);
+        </script>
+    </body>
+</html>

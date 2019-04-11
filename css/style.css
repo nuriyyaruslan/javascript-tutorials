@@ -1,0 +1,7 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.for-links a{
+    display: block;
+    margin-bottom:8px;
+}

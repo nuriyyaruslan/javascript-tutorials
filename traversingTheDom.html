@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Traversing The DOM</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <h1 class="my-title">What is Traversing The DOM?</h1>
+        <ul>
+            <li class="first-child">Home</li>
+            <li id="about">About</li>
+            <li>Testimonials</li>
+            <li>Partners</li>
+            <li>Contact</li>
+        </ul>
+        <script>
+
+            //call element with TagName
+            var myList = document.getElementsByTagName('ul');
+            console.log(myList);
+            
+            var myList0 = myList[0];
+            console.log(myList0);
+            
+            //call element with ClassName
+            var getElement = document.getElementsByClassName("first-child");
+            console.log(getElement);
+            
+            //call element with id
+            var getElementId = document.getElementById('about');
+            console.log(getElementId.innerHTML);            
+
+            //call element with querySelector
+            var SelectElement = document.querySelector('#about');
+            console.log(SelectElement);
+            
+            //call element with queryAllSelector
+            var SelectAllElement = document.querySelectorAll("h1");
+            console.log(SelectAllElement);
+        </script>
+    </body>
+</html>

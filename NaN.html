@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NaN</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <script>
+            var a= 'a';
+            var b= 5;
+            console.log(a * b);
+            //result: Nan
+
+            if(isNaN(a)){
+                console.log("that int even a number, thickie");
+            }else{
+                console.log('meaning of life is ' + (a+b));
+            }
+            console.log("the type of variable value is " + typeof(a));
+        </script>
+    </body>
+</html>

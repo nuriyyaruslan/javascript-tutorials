@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Strings</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <h1>Strings</h1>
+        <script>
+            // "''" or '""' 
+          var myString = "I\'m 'a' string";
+          console.log(myString);
+
+          console.log(myString.length);
+          console.log(myString.toLocaleUpperCase());
+          console.log(myString.toLocaleLowerCase());
+
+          //if there is not result of your index then result will be -1
+          console.log(myString.indexOf("m"));
+          console.log(myString.indexOf("5"));
+
+          if(myString.indexOf('nuriyya') === -1){
+              console.log('the word is not in the string');
+          }
+
+          var string1 = "abc";
+          var string2 = "bcd";
+          console.log(string1 === string2);
+        </script>
+    </body>
+</html>

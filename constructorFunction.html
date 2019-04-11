@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Constructor functions</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <h1>What is Constructor function?</h1>
+
+        <script>
+           var myCar = {
+               //atributes
+               mySpeed:70,
+               time:5,
+               carColour:'red',
+               myDriver:'nuriyya',
+               drive:function(speed,time){
+                   console.log(speed*time);
+               },
+               test: function(){
+                   console.log(this);
+               },
+               whoIsDriver:function(){
+                   console.log('The car driver is ' + this.myDriver);
+               }
+           }
+
+           var myCar1 = {
+               mySpeed:70,
+               time:5,
+               carColour:'red',
+               myDriver:'nuriyya',
+               drive:function(speed,time){
+                   console.log(speed*time);
+               },
+               test: function(){
+                   console.log(this);
+               },
+               whoIsDriver:function(){
+                   console.log('The car driver is ' + this.myDriver);
+               }
+           }
+
+           var myCar2 = {
+               mySpeed:70,
+               time:5,
+               carColour:'red',
+               myDriver:'nuriyya',
+               drive:function(speed,time){
+                   console.log(speed*time);
+               },
+               test: function(){
+                   console.log(this);
+               },
+               whoIsDriver:function(){
+                   console.log('The car driver is ' + this.myDriver);
+               }
+           }
+
+           var Car  = function(maxSpeed, driver){
+               this.maxSpeed = maxSpeed;
+               this.driver = driver;
+               this.drive = function(speed,time){
+                   console.log(speed * time);
+               };
+               this.whoIsDriver = function(){
+                   console.log("driver name is " + this.driver);
+               }
+           }
+           
+           var myCar = new Car(70,Nuriyya);
+           var myCar1 = new Car(100, Ruslan);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Elements</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="img/favicon.png">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <script src="js/script.js"></script>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <h1>What is form elements?</h1>
+
+        <form action="" id="my-form" name="myForm" action="#">
+            <label for="name">Name:</label>
+            <input type="text" name="name"> <br>
+
+            <label for="">Hobbies:</label> <br>
+            <input type="checkbox" name="biking" value="biking"> Biking <br>
+            <input type="checkbox" name="skiing" value="skiing">Skiiing <br>
+            <input type="checkbox" name="driving" value="driving">Driving <br>
+
+            <label for="colour">Favorite colour:</label>
+
+            <select name="colour" id="">
+                <option value="">Red</option>
+                <option value="">Green</option>
+                <option value="">Blue</option>
+            </select> <br>
+            <button type="submit">Submit</button>
+        </form>
+
+        <script>
+            //you can call your forms with forms.formName
+            var myForm = document.forms.myForm;
+            console.log(myForm);
+            
+            //and also you can call your form element with it's name
+            console.log(myForm.biking.value);
+
+
+            myForm.name.onfocus = function(){
+                myForm.name.style.border="4px solid pink";
+            }
+            myForm.name.onblur = function(){
+                myForm.name.style.border ="1px solid #000";
+            }
+        </script>
+    </body>
+</html>
